@@ -1,0 +1,11 @@
+line 69
+<button type="button" class="w-100 btn btn-lg btn-outline-primary" id="GitLink">Git Hub </button>
+89
+<button type="button" class="w-100 btn btn-lg btn btn-outline-primary" id="linkedinProfile">linkedin Profile</button>
+106
+<button type="button" class="w-100 btn btn-lg btn btn-outline-primary" id="contactgmail">Contact us</button>
+
+
+<li class="nav-item">
+    <a class="nav-link disabled" aria-disabled="true">Usage guide</a>
+  </li>

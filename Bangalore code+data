@@ -1,0 +1,39 @@
+//html data-bs-target <tr>
+    <th scope="row" class="text-start">Bangalore</th>
+    <td><span id="bngtemp"></span></td>
+    <td><span id="bngfeels"></span></td>
+    <td><span id="bnghumid"></span></td>
+    <td><span id="bngvis"></span></td>
+    <td><span id="bngspeed"></span></td>
+    <td><span id="bngdeg"></span></td>
+    <td><span id="bngdew"></span></td>
+    <td><span id="bngsumm"></span></td>
+    <td><svg class="bi" width="24" height="24">
+        <use xlink:href="#check"></use>
+      </svg></td>
+    <td><svg class="bi" width="24" height="24">
+        <use xlink:href="#check"></use>
+      </svg></td>
+  </tr>
+
+  //javascript code
+
+  async function fetchBnglore(){
+	try{
+	    const response1 = await fetch(`https://ai-weather-by-meteosource.p.rapidapi.com/current?place_id=Bangalore&timezone=auto&language=en&units=auto`, options);
+		const result1 = await response1.json();
+		console.log(result1);
+		bngtemp.innerHTML=result1.current.temperature;
+		bngfeels.innerHTML=result1.current.feels_like;
+		bnghumid.innerHTML=result1.current.humidity;
+		bngspeed.innerHTML=result1.current.wind.speed;
+		bngdeg.innerHTML=result1.current.temperature;
+		bngdew.innerHTML=result1.current.dew_point;
+		bngsumm.innerHTML=result1.current.summary;
+		bngvis.innerHTML=result1.current.visibility;
+	}
+	catch(error){
+		console.error(error)
+	}
+}
+  fetchBnglore();
